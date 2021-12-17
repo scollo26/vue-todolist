@@ -13,3 +13,31 @@
 // Bonus:
 // 1- oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il todo alla lista
 // 2- cliccando sul testo dell’item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)
+
+
+
+
+
+const app = new Vue(
+    {
+        el: '#app',
+        data: {
+            new: '',
+            todos:[
+                {
+                    text:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit molestias hic, corporis facere ullam non sequi ad expedita ',
+                    done: true
+                },
+                {
+                    text:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit molestias hic, corporis facere ullam non sequi ad expedita ',
+                    done: true
+                },
+                {
+                    text:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit molestias hic, corporis facere ullam non sequi ad expedita ',
+                    done: false
+                },
+            ]
+            
+        }
+    }
+)
