@@ -22,21 +22,45 @@ const app = new Vue(
     {
         el: '#app',
         data: {
+            todoNew:'',
             todos: [
                 {
-                    text:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit molestias hic, corporis facere ullam non sequi ad expedita ',
+                    text:'Bugatti  ',
                     done: true
                 },
                 {
-                    text:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit molestias hic, corporis facere ullam non sequi ad expedita ',
+                    text:'Ferrari ',
                     done: true
                 },
                 {
-                    text:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit molestias hic, corporis facere ullam non sequi ad expedita ',
+                    text:'Lamborghini  ',
                     done: false
                 },
             ]
             
+        },
+        methods: {
+            //  click icona aggiungo elemento
+            addTodo: function() {
+                // controllo se stringa vuota
+                if (this.todoNew != '') {
+                    let obj = {
+                        text: this.todoNew,
+                        done: false
+                    };
+                    // mette in prima posizione
+                    this.todos.unshift(obj);
+                    this.todoNew='';  
+                }
+            },
+            // controllo la variabile booleana e la inverte 
+            check: function(index) {
+                this.todos[index].done = !this.todos[index].done;
+            },
+            // cancella elemento
+            deleteTodo: function(index) {
+                this.todos.splice(index, 1);
+            },
         }
     }
 )
