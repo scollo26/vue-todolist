@@ -22,8 +22,7 @@ const app = new Vue(
     {
         el: '#app',
         data: {
-            new: '',
-            todos:[
+            todos: [
                 {
                     text:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit molestias hic, corporis facere ullam non sequi ad expedita ',
                     done: true

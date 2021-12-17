@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="container-main">
+        <div id="app" class="container-main">
             <header>
                 <h1 class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia deserunt suscipit molestiae </h1>
 
@@ -27,8 +27,9 @@
                 </div>
                 <div class="todos">
                     <ul>
-                        <li>
-                            <h4>text</h4>
+                        <li v-for="todo in todos">
+                            <h4>{{todo.text}}</h4>
+                            <i class="fas fa-user-minus"></i>
 
                         </li>
                     </ul>
